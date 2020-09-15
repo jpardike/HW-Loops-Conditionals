@@ -34,8 +34,8 @@ const randOutput = ['...human...why you taking pictures of me?...', '...the catn
 
 for (let i = 1; i <= 20; i++) {
     if (i % 2 === 0) {
-        console.log(regOutput);
+        console.log(i, randOutput[Math.floor(Math.random() * 3)]);
     } else {
-        console.log(randOutput[Math.floor(Math.random() * 3)]);
+        console.log(i, regOutput);
     }
 }
