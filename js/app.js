@@ -289,3 +289,28 @@ console.log(thomsCloset[0]);
 console.log(thomsCloset[1]);
 console.log(thomsCloset[2]);
 
+/* 
+
+Multiples of 3 and 5
+
+Yes, you might have tackled this earlier, but try it again (don't look back at your other code 👀)
+
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+Find the sum of all the multiples of 3 or 5 below 1000.
+
+👏 You just solved Project Euler problem 1! 👏
+
+Tip: Get used to thinking about how to solve problems now. Will help immensely with coding challenges, and get your coding brain muscles nice and flexed for the class. Make a habit of going to Project Euler and taking a crack at the problems
+
+*/
+
+let sum = 0;
+
+for (let i = 1; i < 1000; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+        sum += i;
+    } 
+}
+
+console.log(sum);
