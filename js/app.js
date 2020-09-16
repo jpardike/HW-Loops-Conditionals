@@ -170,3 +170,94 @@ for (let i = 0; i < ninjaTurtles.length; i++) {
 }
 
 console.log(ninjaTurtles);
+
+/* 
+
+Return of the Closets
+
+Alien Attire
+1. Kristyn's left shoe has traveled through time and space and turned up in Thom's accessories drawer! Remove Kristyn's shoe from the array and save it to the variable kristynsShoe. Use that variable to add Kristyn's lost shoe to Thom's accessories array.
+
+Dress 'em Up
+1. Modify your code to put together 3 separate outfits for Kristyn and Thom. Put the output in a sentence to tell us what we'll be wearing. Mix and match!
+
+
+*/
+
+const kristynsCloset = [
+    "left shoe",
+    "cowboy boots",
+    "right sock",
+    "GA hoodie",
+    "green pants",
+    "yellow knit hat",
+    "marshmallow peeps"
+  ];
+  
+  // Thom's closet is more complicated. Check out this nested data structure!!
+  const thomsCloset = [
+    [
+      // These are Thom's shirts
+      "grey button-up",
+      "dark grey button-up",
+      "light blue button-up",
+      "blue button-up",
+    ],[
+      // These are Thom's pants
+      "grey jeans",
+      "jeans",
+      "PJs"
+    ],[
+      // Thom's accessories
+      "wool mittens",
+      "wool scarf",
+      "raybans"
+    ]
+  ];
+
+//   Alien Attire
+  const kristynsShoe = kristynsCloset.shift();
+
+  thomsCloset[2].push(kristynsShoe);
+
+  console.log(thomsCloset[2]);
+
+//   Dress 'em up
+
+const kOutfit1 = [
+    kristynsCloset[0],
+    kristynsCloset[1],
+    kristynsCloset[2],
+];
+const kOutfit2 = [
+    kristynsCloset[1],
+    kristynsCloset[2],
+    kristynsCloset[3],
+];
+const kOutfit3 = [
+    kristynsCloset[2],
+    kristynsCloset[3],
+    kristynsCloset[4],
+];
+
+const tOutfit1 = [
+    thomsCloset[0][0],
+    thomsCloset[1][0],
+    thomsCloset[2][0],
+];
+const tOutfit2 = [
+    thomsCloset[0][1],
+    thomsCloset[1][1],
+    thomsCloset[2][1],
+];
+const tOutfit3 = [
+    thomsCloset[0][2],
+    thomsCloset[1][2],
+    thomsCloset[2][2],
+];
+
+function outfits(arr) {
+    console.log(`This outfit has a ${arr[0]}, a ${arr[1]}, and a ${arr[2]} for Thom or Kristyn to wear because they share.`);
+}
+
+outfits(tOutfit2);
